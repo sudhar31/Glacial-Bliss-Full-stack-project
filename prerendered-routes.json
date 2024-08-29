@@ -1,0 +1,12 @@
+{
+  "routes": [
+    "/",
+    "/book-table",
+    "/cart",
+    "/home",
+    "/login",
+    "/orders",
+    "/products",
+    "/register"
+  ]
+}
