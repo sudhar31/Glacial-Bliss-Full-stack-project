@@ -1,0 +1,69 @@
+<div class="container mt-4">
+  <div class="card shadow-sm">
+    <div class="card-header bg-primary text-white">
+      <h5 class="card-title">Your Cart</h5>
+    </div>
+    <div class="card-body">
+      <div *ngIf="cart.length === 0" class="text-center">
+        <p>Your cart is empty.</p>
+      </div>
+      <table *ngIf="cart.length > 0" class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of cart">
+            <td>{{ item.product.name }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>₹{{ getTotalPrice(item.product) }}</td>
+            <td>
+              <button class="btn btn-danger btn-sm" (click)="removeItem(item.product)">Remove</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="d-flex justify-content-between mt-3">
+        <strong>Total Price: ₹{{ totalPrice }}</strong>
+        <div>
+          <button class="btn btn-primary me-2" (click)="proceedToPay()">Proceed to Pay</button>
+          <button class="btn btn-secondary me-2" routerLink="/products">Add More Products</button>
+          <button class="btn btn-info" routerLink="/orders">Show Bill</button>
+        </div>
+      </div>
+      
+      <div *ngIf="showPaymentOptions" class="mt-4">
+        <h5 class="mb-3">Select Payment Method:</h5>
+        <div class="d-flex flex-column mb-3">
+          <div class="btn-group-vertical" role="group">
+            <input type="radio" class="btn-check" name="paymentOptions" id="upiOption" value="upi" [(ngModel)]="selectedPaymentMethod">
+            <label class="btn btn-outline-primary btn-lg mb-2" for="upiOption">UPI</label>
+
+            <input type="radio" class="btn-check" name="paymentOptions" id="netbankingOption" value="netbanking" [(ngModel)]="selectedPaymentMethod">
+            <label class="btn btn-outline-primary btn-lg mb-2" for="netbankingOption">Net Banking</label>
+
+            <input type="radio" class="btn-check" name="paymentOptions" id="cashOption" value="cash" [(ngModel)]="selectedPaymentMethod">
+            <label class="btn btn-outline-primary btn-lg mb-2" for="cashOption">Cash</label>
+
+            <input type="radio" class="btn-check" name="paymentOptions" id="debitcardOption" value="debitcard" [(ngModel)]="selectedPaymentMethod">
+            <label class="btn btn-outline-primary btn-lg mb-2" for="debitcardOption">Debit Card</label>
+
+            <input type="radio" class="btn-check" name="paymentOptions" id="creditcardOption" value="creditcard" [(ngModel)]="selectedPaymentMethod">
+            <label class="btn btn-outline-primary btn-lg mb-2" for="creditcardOption">Credit Card</label>
+          </div>
+        </div>
+        <button class="btn btn-success btn-lg btn-block" (click)="pay()">Pay</button>
+        <div *ngIf="paymentSuccess" class="alert alert-success mt-2">
+          Payment Successful!
+        </div>
+      </div>
+    </div>
+    <div class="card-footer text-center">
+      <button class="btn btn-danger" (click)="clearCart()">Clear All</button>
+    </div>
+  </div>
+</div>

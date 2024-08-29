@@ -1,1 +1,148 @@
-/* You can add global styles to this file, and also import other style files */
+[data-theme='dark'] {
+  --bg-color: #17153B;
+  --text-color: #fff;
+  --link-color: #1e90ff;
+  --link-hover-color: #00bfff;
+  --navbar-bg: #17153B;
+  --card-bg-color: #444;
+  --input-bg-color: #555;
+  --input-text-color: #fff;
+  --button-bg-color: #007bff;
+  --button-text-color: #fff;
+  --button-hover-bg-color: #0056b3;
+  --text-danger-color: #ff4d4f;
+  --text-muted-color: #FFC300 ;
+  --product-name-color-dark: #ffffff;
+  --product-description-color-dark: #cccccc;
+  --product-price-color-dark: #ff6347;
+
+  /*background image transparent*/
+  --image-opacity: 0.5;
+  --image-background: rgba(0, 0, 0, var(--image-opacity));
+
+  /*Cart details and Show Bill details*/
+  --background-color: #333333;
+  --text-color: #ffffff;
+  --header-bg-color: #555555;
+  --header-text-color: #ffffff;
+  --border-color: #444;
+  --table-header-bg-color: #666666;
+  --table-header-text-color: #ffffff;
+  --table-row-bg-color: #444444;
+  --table-row-alt-bg-color: #555555;
+  --table-border-color: #555;
+
+  /* Reservation table*/
+  --input-focus-border-color: #00aaff;
+  --button-background-color: #00aaff;
+  --button-hover-background-color: #0077cc;
+  --button-text-color: #fff;
+  --error-color: #ff6b6b;
+   --success-color: #3bb77e;
+  
+  
+}
+
+[data-theme='light'] {
+  --bg-color: #fff;
+  --text-color: #000;
+  --link-color: #007bff;
+  --navbar-bg: #f8f9fa;
+  --navbar-bg: #f8f9fa;
+  --card-bg-color: #f8f9fa;
+  --input-bg-color: #fff;
+  --input-text-color: #000;
+  --button-bg-color: #007bff;
+  --button-text-color: #fff;
+  --button-hover-bg-color: #0056b3;
+  --text-danger-color: #dc3545;
+  --text-muted-color: #6c757d;
+  --link-hover-color: #0056b3;
+  --product-name-color: #333333;
+  --product-description-color: #555555;
+  --product-price-color: #ff6347;
+  
+  /*background image transparent*/
+  --image-opacity: 0.5;
+  --image-background: rgba(255, 255, 255, var(--image-opacity));
+
+  /*Reservation table*/
+  --input-focus-border-color: #007bff;
+  --button-background-color: #007bff;
+  --button-hover-background-color: #0056b3;
+  --button-text-color: #fff;
+  --error-color: #ff6b6b;
+  --success-color: #3bb77e;
+
+  /* Cart and Showbill details*/
+  --table-header-bg-color: #f8f9fa;
+  --table-header-text-color: #000;
+  --table-row-bg-color: #ffffff;
+  --table-row-alt-bg-color: #f2f2f2;
+  --table-border-color: #ddd;
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container-fluid,
+.container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: var(--bg-color);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--link-color);
+}
+
+.navbar {
+  background-color: var(--navbar-bg) !important;
+  transition: background-color 0.3s;
+}
+
+.footer-hidden {
+  transform: translateY(100%);
+}
+
+.container {
+  padding: 0 15px;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  flex-shrink: 0;
+  position: relative;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}

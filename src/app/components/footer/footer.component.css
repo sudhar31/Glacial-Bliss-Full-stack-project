@@ -1,0 +1,109 @@
+.footer {
+  background-color: var(--navbar-bg);
+  color: var(--text-color);
+  width: 100%;
+  transition: transform 0.5s ease, background-color 0.3s, color 0.3s;
+  z-index: 10;
+  padding: 1rem 0;
+  text-align: center;
+  position: relative;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.footer-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-family: 'Dancing Script', cursive;
+  letter-spacing: 2px;
+  transition: transform 0.5s ease, color 0.5s ease;
+}
+
+.footer-links {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: var(--text-color);
+  margin: 0 0.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--link-color);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.footer-social {
+  margin-bottom: 0.5rem;
+}
+
+.footer-social .social-icon {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin: 0 0.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  border-radius: 50%;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-social .social-icon:hover {
+  color: var(--link-color);
+  transform: translateY(-3px);
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-instagram {
+  background: #E1306C;
+  color: white;
+}
+
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: black;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.footer-hidden {
+  transform: translateY(100%);
+}

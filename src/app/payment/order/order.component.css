@@ -1,0 +1,134 @@
+/* General Styles for Both Themes */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    border-radius: 8px;
+  }
+  
+  .card-header {
+    border-bottom: 2px solid #007bff;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .card-footer {
+    border-top: 2px solid #007bff;
+  }
+  
+  .btn {
+    border-radius: 4px;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+  
+  .table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+  }
+  
+  .table thead th {
+    background-color: #f8f9fa;
+  }
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f2f2f2;
+  }
+  
+  .table th, .table td {
+    text-align: center;
+    padding: 0.75rem;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .d-flex {
+    display: flex;
+  }
+  
+  .justify-content-between {
+    justify-content: space-between;
+  }
+  
+  .mt-3 {
+    margin-top: 1rem;
+  }
+  
+  .mt-4 {
+    margin-top: 1.5rem;
+  }
+  
+  pre {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  /* Light Theme Adjustments */
+  .bg-primary {
+    background-color: #007bff !important;
+  }
+  
+  .text-white {
+    color: #fff !important;
+  }
+  
+  /* Dark Theme Adjustments */
+  body.dark-theme .card-header {
+    background-color: #343a40;
+  }
+  
+  body.dark-theme .card-body, body.dark-theme .card-footer {
+    background-color: #495057;
+    color: #e9ecef;
+  }
+  
+  body.dark-theme .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  body.dark-theme .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+  
+  body.dark-theme .table thead th {
+    background-color: #495057;
+    color: #e9ecef;
+  }
+  
+  body.dark-theme .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #343a40;
+  }
+  
+  body.dark-theme .table td, body.dark-theme .table th {
+    color: #e9ecef;
+  }
+  
+  body.dark-theme pre {
+    background: #343a40;
+    color: #e9ecef;
+  }
+  

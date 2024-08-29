@@ -1,0 +1,13 @@
+body {
+    background-color: var(--bg-color);
+    color: #CCD5AE;
+  }
+  
+  .card {
+    background-color: var(--card-bg-color);
+  }
+
+  .card-title:hover{
+    color: aliceblue;
+  }
+  

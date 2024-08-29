@@ -1,0 +1,63 @@
+<section id="book-a-table" class="book-a-table section">
+    <div class="section-spacer"></div> <!--Gap for sections-->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Reservation</h2>
+      <p>Book a Table</p>
+    </div>
+  
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <form [formGroup]="reservationForm" (ngSubmit)="onSubmit()" class="reservation-form">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6">
+            <input type="text" formControlName="name" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <input type="email" formControlName="email" class="form-control" placeholder="Your Email" required>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <input type="text" formControlName="phone" class="form-control" placeholder="Your Phone" required>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <input type="date" formControlName="date" class="form-control" placeholder="Date" required>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <input type="time" formControlName="time" class="form-control" placeholder="Time" required>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <input type="number" formControlName="people" class="form-control" placeholder="No of People" min="1" max="8" required>
+          </div>
+        </div>
+  
+        <div class="form-group mt-3">
+          <textarea formControlName="message" class="form-control" rows="5" placeholder="Message (up to 100 characters)" maxlength="100"></textarea>
+        </div>
+  
+        <div class="form-group mt-3">
+          <select formControlName="tableType" class="form-control">
+            <option value="" disabled selected>Select Your Table Type</option>
+            <option value="single">Single Table</option>
+            <option value="couple">Couple Table</option>
+            <option value="family">Family | Friends Table</option>
+            <option value="party">Party Hall</option>
+          </select>
+        </div>
+  
+        <div class="text-center mt-3">
+          <div *ngIf="isSubmitting" class="loading">Loading...</div>
+          <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+          <div *ngIf="isSubmitted" class="sent-message">
+            <p>🎉 Delightful! Your table is booked! 🎉 and you'll receive a message shortly from us! 🎉</p>
+          </div>
+          <div class="section-spacer"></div> <!--Gap for sections-->
+          <button type="submit" class="btn btn-primary">Book a Table</button>
+        </div>
+
+        <div class="row">
+            <div class="col-12 d-flex justify-content-between">
+                <button class="btn btn-primary backbutton" routerLink="/">Back to Home</button>
+            </div>
+        </div>
+      </form>
+    </div>
+  </section>
+  
